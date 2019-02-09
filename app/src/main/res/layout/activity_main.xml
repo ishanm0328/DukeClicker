@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/id_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/id_linear"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/id_linear" />
+
+    <LinearLayout
+        android:id="@+id/id_linear"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_cps">
+
+        <LinearLayout
+            android:id="@+id/id_upgradeOneLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/id_upgrade"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/camreddish" />
+
+            <TextView
+                android:id="@+id/id_upgradeOneCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Price:" />
+
+            <TextView
+                android:id="@+id/id_upgradeOneCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Amount:" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_upgradeTwoLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/id_upgrade2"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rjbarrett" />
+
+            <TextView
+                android:id="@+id/id_upgradeTwoCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Price:" />
+
+            <TextView
+                android:id="@+id/id_upgradeTwoCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Amount:" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_upgradeThreeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/id_upgrade3"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/zionwilliamson" />
+
+            <TextView
+                android:id="@+id/id_upgradeThreeCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Price:" />
+
+            <TextView
+                android:id="@+id/id_upgradeThreeCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Amount:" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/id_cps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="158dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="39dp"
+        android:text="Points Per Second: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/id_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Points:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/id_imageView"
+        android:layout_width="125dp"
+        android:layout_height="118dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_linear"
+        app:srcCompat="@drawable/duke" />
+
+    <Switch
+        android:id="@+id/id_autoSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="80dp"
+        android:checked="true"
+        android:text="Automate"
+        android:textOff="Paused"
+        android:textOn="Running"
+        app:layout_constraintEnd_toStartOf="@+id/id_imageView"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_linear" />
+
+</android.support.constraint.ConstraintLayout>

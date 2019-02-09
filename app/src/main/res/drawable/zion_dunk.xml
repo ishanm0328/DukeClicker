@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/selected"
+        android:oneshot="false">
+        <item android:drawable="@drawable/scene00001" android:duration="200" />
+        <item android:drawable="@drawable/scene00003" android:duration="200" />
+        <item android:drawable="@drawable/scene00005" android:duration="200" />
+        <item android:drawable="@drawable/scene00007" android:duration="200" />
+        <item android:drawable="@drawable/scene00009" android:duration="200" />
+        <item android:drawable="@drawable/scene00011" android:duration="200" />
+        <item android:drawable="@drawable/scene00013" android:duration="200" />
+        <item android:drawable="@drawable/scene00015" android:duration="200" />
+        <item android:drawable="@drawable/scene00017" android:duration="200" />
+        <item android:drawable="@drawable/scene00019" android:duration="200" />
+        <item android:drawable="@drawable/scene00021" android:duration="200" />
+        <item android:drawable="@drawable/scene00023" android:duration="200" />
+        <item android:drawable="@drawable/scene00025" android:duration="200" />
+        <item android:drawable="@drawable/scene00027" android:duration="200" />
+        <item android:drawable="@drawable/scene00029" android:duration="200" />
+        <item android:drawable="@drawable/scene00031" android:duration="200" />
+        <item android:drawable="@drawable/scene00033" android:duration="200" />
+        <item android:drawable="@drawable/scene00035" android:duration="200" />
+        <item android:drawable="@drawable/scene00037" android:duration="200" />
+        <item android:drawable="@drawable/scene00039" android:duration="200" />
+        <item android:drawable="@drawable/scene00041" android:duration="200" />
+        <item android:drawable="@drawable/scene00043" android:duration="200" />
+        <item android:drawable="@drawable/scene00045" android:duration="200" />
+        <item android:drawable="@drawable/scene00047" android:duration="200" />
+        <item android:drawable="@drawable/scene00049" android:duration="200" />
+        <item android:drawable="@drawable/scene00051" android:duration="200" />
+    </animation-list>
