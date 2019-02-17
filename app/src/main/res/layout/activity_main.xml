@@ -14,8 +14,9 @@
         android:layout_height="match_parent"
         android:alpha="0.5"
         app:layout_constraintEnd_toStartOf="@+id/id_linear"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/id_linear" />
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/id_linear"
+        tools:layout_editor_absoluteY="16dp" />
 
     <LinearLayout
         android:id="@+id/id_linear"
@@ -152,11 +153,11 @@
         android:id="@+id/id_imageView"
         android:layout_width="125dp"
         android:layout_height="118dp"
-        android:layout_marginEnd="129dp"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="129dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_linear"
         app:srcCompat="@drawable/duke" />
