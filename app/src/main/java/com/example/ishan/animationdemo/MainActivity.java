@@ -1,13 +1,11 @@
 package com.example.ishan.animationdemo;
 
-import android.content.Context;
 import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -19,14 +17,6 @@ import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.nio.FloatBuffer;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -52,8 +42,6 @@ public class MainActivity extends AppCompatActivity {
     final myThread upThread = new myThread();
     Switch autoSwitch;
     AnimationDrawable zionDunk;
-    JSONObject stats = new JSONObject();
-    String file = "info.json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,30 +76,6 @@ public class MainActivity extends AppCompatActivity {
         visualChanges(upgradeThreeCost);
         visualChanges(upgradeThreeCount);
 
-        if (savedInstanceState != null)
-        {
-            try {
-                upThread.running.set(true);
-                BufferedReader reader = new BufferedReader(new InputStreamReader(openFileInput(file)));
-                JSONObject jsonObject = new JSONObject(reader.readLine());
-                clicks = Integer.parseInt(jsonObject.getString("Clicks"));
-                upThread.cps = Integer.parseInt(jsonObject.getString("CPS"));
-                points.set(Integer.parseInt(jsonObject.getString("Points")));
-                upgradeOnePrice = Integer.parseInt(jsonObject.getString("Upgrade One Cost"));
-                upgradeTwoPrice = Integer.parseInt(jsonObject.getString("Upgrade Two Cost"));
-                upgradeThreePrice = Integer.parseInt(jsonObject.getString("Upgrade Three Cost"));
-                upgradeOneAmount = Integer.parseInt(jsonObject.getString("Upgrade One Amount"));
-                upgradeTwoAmount = Integer.parseInt(jsonObject.getString("Upgrade Two Amount"));
-                upgradeThreeAmount = Integer.parseInt(jsonObject.getString("Upgrade Three Amount"));
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
 
         autoSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -141,33 +105,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        try {
-            OutputStreamWriter writer = new OutputStreamWriter(openFileOutput(file, Context.MODE_PRIVATE));
-            stats.put("Points", points);
-            stats.put("CPS", upThread.cps);
-            stats.put("Clicks", clicks);
-            stats.put("Upgrade One Cost", upgradeOnePrice);
-            stats.put("Upgrade One Amount", upgradeOneAmount);
-            stats.put("Upgrade Two Cost", upgradeTwoPrice);
-            stats.put("Upgrade Two Amount", upgradeTwoAmount);
-            stats.put("Upgrade Three Cost", upgradeThreePrice);
-            stats.put("Upgrade Three Amount", upgradeThreeAmount);
-            writer.write(stats.toString());
-            writer.close();
-            Log.d("loggy", stats.toString());
-            Log.d("loggy", "Saved Interface");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     @Override
